@@ -1,0 +1,10 @@
+<!--pages/test/test.wxml-->
+<picker bindchange="testGetRequest" value="{{index}}" range="{{testData}}">
+   <view class="test">
+     <text>选择网址请求:</text>
+     <text>{{testData[index]}}</text>>
+   </view>
+</picker>
+
+
+

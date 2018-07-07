@@ -1,0 +1,112 @@
+/* pages/myDevices/myDevices.wxss */
+.changeName{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 5px solid #f0f0f0;
+}
+.nameInput{
+  padding: 2% 0 1% 3%;
+  margin: 5% 20% 2% 8%;
+}
+.hint{
+  font-size: 13px;
+}
+.buttonDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 6%;
+}
+.buttonPart{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f0f0f0;
+  border-top-left-radius: 10px;
+  height: 15px;
+  width: 50%;
+  padding: 2%;
+}
+.buttonPart01{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f0f0f0;
+  border-top-right-radius: 10px;
+  height: 15px;
+  width: 50%;
+  padding: 2%;
+}
+.button_font{
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1em;
+}
+.all{
+  display: flex;
+  flex-direction: column;
+}
+.icon{
+  height: 30px;
+  width: 30px;
+}
+.icon01{
+  height: 20px;
+  width: 20px;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3% 0 2% 3%;
+  border-bottom: 10px solid #f0f0f0;
+  border-top: 10px solid #f0f0f0;
+}
+.title01{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3% 0 2% 3%;
+  border-bottom: 3px solid #f0f0f0;
+  border-top: 10px solid #f0f0f0;
+}
+.title02{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3% 0 2% 3%;
+  border-bottom: 1px solid #f0f0f0;
+  border-top: 10px solid #f0f0f0;
+}
+.title_font{
+  margin-left:2%;
+  font-size: 20px;
+}
+.title_font01{
+  margin-left:2%;
+  font-size: 13px;
+}
+.icon_delete{
+  position: fixed;
+  right: 5%;
+  height: 18px;
+  width: 18px;
+}
+.myDevicesDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3% 0 2% 3%;
+  border-bottom: 1px solid #f0f0f0;
+}
+.devices_font{
+  font-size: 15px;
+  margin-left: 2%;
+}
+.icon_device{
+  height: 18px;
+  width: 18px;
+  margin-left: 4%;
+}

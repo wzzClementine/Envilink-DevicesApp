@@ -1,0 +1,187 @@
+<!--pages/resident/resident.wxml-->
+<view class="navigation_bar">
+  <view class="navigation_div{{title_div==1?'on':''}}">
+    <text id="1" class="" bindtap="switchBar">温度湿度</text>
+  </view>
+  <view class="navigation_div{{title_div==2?'on':''}}">
+    <text id="2" class="" bindtap="switchBar">舒适健康</text>
+  </view>
+  <view class="navigation_div{{title_div==3?'on':''}}">
+    <text id="3" class="" bindtap="switchBar">电耗情况</text>
+  </view>
+  <view class="navigation_div{{title_div==4?'on':''}}">
+    <text id="4" class="" bindtap="switchBar">空气质量</text>
+  </view>
+</view>
+
+
+<view class="part">   
+
+   <view class="navigation_title01" hidden="{{bar_01}}">
+
+  <view class="chart_div">
+      <view class="title">
+        <image class="icon" src="../image/temp_spc03.png"></image>      
+         <text class="icon_text">温度值(℃)</text>
+      </view>
+         <view class="title01">
+              <text class="text01">当前指标:</text>
+         </view>
+         <view class="data_div01">
+            <view class="value">
+               <text class="data">{{temp}}</text>
+               <text class="text03">℃</text>
+            </view>
+         </view>
+
+  </view>
+
+
+ 
+<view class="line"></view>
+
+     <view class="chart_div">
+        <view class="title">
+          <image class="icon" src="../image/sd_spc01.png"></image>
+          <text class="icon_text">湿度值(%)</text>
+       </view>
+       <view class="title01">
+              <text class="text01">当前指标:</text>
+         </view>
+         <view class="data_div01">
+            <view class="value">
+               <text class="data">{{sd}}</text>
+               <text class="text03">%</text>
+            </view>
+         </view>
+    </view>
+<view class="line01"></view>
+   
+
+
+   </view>
+</view>
+
+
+<view class="part">
+   <view  class="navigation_title" hidden="{{bar_02}}">
+     
+       <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/person03.png"></image>
+             <text class="icon_text">舒适度情况</text>
+         </view>
+         <view class="title01">
+              <text class="text01">当前指标apmv:</text>
+         </view>
+         <view class="data_div">
+            <view class="value01">
+               <text class="data">{{comfor}}</text>
+            </view>
+            <view class="des01">
+               <text class="data">舒适</text>
+            </view>
+         </view>
+      </view>
+     
+      <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/health.png"></image>
+             <text class="icon_text">健康度情况</text>
+         </view>
+         <view class="title01">
+              <text class="text01">当前指标IAQI:</text>
+         </view>
+         <view class="data_div">
+            <view class="value01">
+               <text class="data">{{health}}</text>
+            </view>
+            <view class="des01">
+               <text class="data">优</text>
+            </view>
+         </view>
+      </view>
+
+
+
+
+    </view>  
+</view>
+
+<view class="part">
+   <view  class="navigation_title" hidden="{{bar_03}}">
+       <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/electric_spc01.png"></image>
+             <text class="icon_text">本周电耗</text>
+         </view>
+         <view class="title01">
+              <text class="text01">耗电量:</text>
+         </view>
+         <view class="data_div01">
+            <view class="value">
+               <text class="data">56.07</text>
+               <text class="text03">kWh</text>
+            </view>
+         </view>
+      </view>
+     
+      <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/electric_spc01.png"></image>
+             <text class="icon_text">本月电耗</text>
+         </view>
+         <view class="title01">
+              <text class="text01">耗电量:</text>
+         </view>
+         <view class="data_div01">
+            <view class="value">
+               <text class="data">187.99</text>
+               <text class="text03">kWh</text>
+            </view>
+         </view>
+      </view>
+
+
+
+    
+   </view>
+</view>
+
+
+<view class="part">
+   <view  class="navigation_title" hidden="{{bar_04}}">
+
+     <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/air01.png"></image>
+             <text class="icon_text">空气质量指数</text>
+         </view>
+         <view class="title01">
+              <text class="text01">当前数值AQI:</text>
+         </view>
+         <view class="data_div01">
+            <view class="value">
+               <text class="data">{{air}}</text>
+            </view>
+         </view>
+      </view>
+
+       <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/comment03.png"></image>
+             <text class="icon_text">健康建议</text>
+         </view>
+         <view class="data_div01">
+            <view class="value03">
+               <text class="data03">近期室外温度较高，室外pm2.5浓度低，建议开启空调前提前开窗15分钟，可以有效缓解室内co2浓度高造成的疲劳感.</text>
+            </view>
+         </view>
+      </view>
+
+
+
+
+   </view>
+</view>
+  

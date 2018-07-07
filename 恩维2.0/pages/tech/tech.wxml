@@ -1,0 +1,224 @@
+<!--pages/tech/tech.wxml-->
+<view class="myDeviceDiv">
+
+   <view class="addDevicesDiv">
+      <picker bindchange="chooseDevices" value="{{index}}" range="{{myDevices}}">
+       <view class="my_title">
+           <image class="my_icon" src="../image/device01.png"></image>
+           <text class="title_font">当前设备:</text>
+           <text class="title_font">{{myDevices[index]}}</text>       
+       </view>
+      </picker>
+   </view>
+
+   <view class="collect" bindtap="collect">
+       <image class="icon01" src="../image/collect01.png" ></image>
+   </view>
+
+</view>
+
+<view class="navigation_bar">
+  <view class="navigation_div{{title_div==1?'on':''}}">
+    <text id="1" class="" bindtap="switchBar">温度湿度</text>
+  </view>
+  <view class="navigation_div{{title_div==2?'on':''}}">
+    <text id="2" class="" bindtap="switchBar">舒适健康</text>
+  </view>
+  <view class="navigation_div{{title_div==3?'on':''}}">
+    <text id="3" class="" bindtap="switchBar">电耗情况</text>
+  </view>
+  <view class="navigation_div{{title_div==4?'on':''}}">
+    <text id="4" class="" bindtap="switchBar">空气质量</text>
+  </view>
+</view>
+
+
+
+<view class="part">   
+
+   <view class="navigation_title" hidden="{{bar_01}}">
+     <view class="chart_div">
+       <view class="title">
+        <image class="icon" src="../image/temp_spc03.png"></image>      
+         <text class="icon_text">温度值(℃)</text>
+       </view>
+      <view class="chart" >
+        <canvas canvas-id="lineCanvas01" disable-scroll="true" class="canvas" />
+      </view>
+    </view>
+ 
+<view class="line"></view>
+    
+     <view class="chart_div">
+       <view class="title">
+        <image class="icon" src="../image/temp_spc03.png"></image>      
+         <text class="icon_text">实时温度值(℃)</text>
+       </view>
+          <view class="data_div01">
+            <view class="value_first">
+               <text class="data">{{temp}}</text>
+               <text class="text03">℃</text>
+            </view>
+         </view>
+    </view>
+
+<view class="line"></view>
+   
+
+  <view class="chart_div">
+        <view class="title">
+          <image class="icon" src="../image/sd_spc01.png"></image>
+          <text class="icon_text">湿度值(%)</text>
+       </view>
+       <view class="chart" >
+        <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas"  />
+       </view>
+ </view>
+
+<view class="line"></view>
+
+
+     <view class="chart_div">
+       <view class="title">
+        <image class="icon" src="../image/sd_spc01.png"></image>      
+         <text class="icon_text">实时湿度值(℃)</text>
+       </view>
+          <view class="data_div01">
+            <view class="value_first01">
+               <text class="data">{{sd}}</text>
+               <text class="text03">%</text>
+            </view>
+         </view>
+    </view>
+
+
+
+  
+   </view>
+</view>
+
+
+<view class="part">
+   <view  class="navigation_title" hidden="{{bar_02}}">
+     
+       <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/person03.png"></image>
+             <text class="icon_text">舒适度情况</text>
+         </view>
+         <view class="title01">
+              <text class="text01">当前指标apmv:</text>
+         </view>
+         <view class="data_div">
+            <view class="value">
+               <text class="data">{{comfor}}</text>
+            </view>
+            <view class="des">
+               <text class="data">舒适</text>
+            </view>
+         </view>
+      </view>
+     
+      <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/health.png"></image>
+             <text class="icon_text">健康度情况</text>
+         </view>
+         <view class="title01">
+              <text class="text01">当前指标IAQI:</text>
+         </view>
+         <view class="data_div">
+            <view class="value">
+               <text class="data">{{health}}</text>
+            </view>
+            <view class="des">
+               <text class="data">优</text>
+            </view>
+         </view>
+      </view>
+     
+
+    </view>  
+</view>
+
+<view class="part">
+   <view  class="navigation_title" hidden="{{bar_03}}">
+       <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/electric_spc01.png"></image>
+             <text class="icon_text">本周电耗</text>
+         </view>
+         <view class="title01">
+              <text class="text01">耗电量:</text>
+         </view>
+         <view class="data_div01">
+            <view class="value">
+               <text class="data">57.09</text>
+               <text class="text03">kWh</text>
+            </view>
+         </view>
+      </view>
+     
+      <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/electric_spc01.png"></image>
+             <text class="icon_text">本月电耗</text>
+         </view>
+         <view class="title01">
+              <text class="text01">耗电量:</text>
+         </view>
+         <view class="data_div01">
+            <view class="value">
+               <text class="data">191.11</text>
+               <text class="text03">kWh</text>
+            </view>
+         </view>
+      </view>
+
+      
+
+    
+   </view>
+</view>
+
+
+<view class="part">
+   <view  class="navigation_title" hidden="{{bar_04}}">
+
+     <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/air01.png"></image>
+             <text class="icon_text">空气质量指数</text>
+         </view>
+         <view class="title01">
+              <text class="text01">当前数值AQI:</text>
+         </view>
+         <view class="data_div01">
+            <view class="value">
+               <text class="data">{{air}}</text>
+            </view>
+         </view>
+      </view>
+
+       <view class="card">
+          <view class="title">
+             <image class="icon" src="../image/comment03.png"></image>
+             <text class="icon_text">评价结果</text>
+         </view>
+         <view class="title01">
+              <text class="text01">指标:</text>
+         </view>
+         <view class="data_div01">
+            <view class="value">
+               <text class="data">优</text>
+            </view>
+         </view>
+      </view>
+
+    
+   </view>
+</view>
+  
+  
+ 
+  

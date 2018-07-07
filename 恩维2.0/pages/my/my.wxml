@@ -1,0 +1,24 @@
+<!--pages/my/my.wxml-->
+<view class="personInfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover">
+</image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+
+<view class="function">
+  <view class="function_part" bindtap="turnToMyDevices">
+    <image class="icon" src="../image/device01.png"></image>
+    <text class="function_text">我的设备</text>
+    <image class="icon01" src="../image/right01.png"></image>
+  </view>
+  <view class="function_part" bindtap="turnToAttentionEquipment">
+    <image class="icon" src="../image/attention03.png"></image>
+    <text class="function_text">关注的设备</text>
+    <image class="icon01" src="../image/right01.png"></image>
+  </view>
+  <view class="function_part" bindtap="turnToAbout">
+    <image class="icon" src="../image/about01.png"></image>
+    <text class="function_text">关于</text>
+    <image class="icon01" src="../image/right01.png"></image>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/manage/manage.wxml-->
+<view class="card">
+   <view class="title">
+     <image class="icon" src="../image/electric03.png"></image>
+     <text class="icon_text">A幢楼本月空调耗电</text>
+   </view>
+   <view class="title01">
+     <text class="text01">耗电量:</text>
+     
+   </view>
+   <view class="data_div">
+     <text class="data">​40153.97</text>
+     <text class="text02">kWh</text>
+   </view>
+</view>
+
+<view class="card">
+   <view class="title">
+     <image class="icon" src="../image/electric03.png"></image>
+     <text class="icon_text">B幢楼本月空调耗电</text>
+   </view>
+   <view class="title01">
+     <text class="text01">耗电量:</text>
+   </view>
+   <view class="data_div">
+     <text class="data">40126.80</text>
+     <text class="text02">kWh</text>
+   </view>
+</view>
+
+<view class="bottom">
+   <image  class="pic_bottom" src="../image/buildBKG02.jpg"></image>
+</view>

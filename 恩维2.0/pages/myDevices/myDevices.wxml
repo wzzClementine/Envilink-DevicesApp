@@ -1,0 +1,62 @@
+<!--pages/myDevices/myDevices.wxml-->
+<view class="changeName" hidden="{{isChange}}">
+
+     <view class="title02">
+           <image class="icon01" src="../image/change.png"></image>
+           <text class="title_font01">修改[{{nameOfDevice}}]设备名称</text>
+       </view>
+
+     <input class="nameInput" placeholder="请输入修改的设备名..."  placeholder-class="hint" maxlength="10" bindconfirm="changeName"  bindinput="recordName"/>
+
+     <view class="buttonDiv">
+
+       <view class="buttonPart" bindtap="cancelChange">
+          <text class="button_font">取消</text>
+       </view>
+
+       <view class="buttonPart01" bindtap="confirmChange">
+          <text class="button_font">确定</text>
+       </view>
+
+     </view>
+
+</view>
+
+<view class="all" >
+
+   <view class="addDevicesDiv" bindtap="searchResult">
+       <view class="title">
+           <image class="icon" src="../image/search01.png"></image>
+           <text class="title_font">查询设备</text>
+       </view>
+   </view>
+
+   <view class="addDevicesDiv">
+      <picker bindchange="chooseDevices" value="{{index}}" range="{{devices}}">
+       <view class="title">
+           <image class="icon" src="../image/add02.png"></image>
+           <text class="title_font">添加设备</text>
+       </view>
+      </picker>
+   </view>
+
+
+   <view class="title01">
+      <image class="icon" src="../image/mine01.png"></image>
+      <text class="title_font">我的设备</text>
+   </view> 
+
+   <view class="myDevicesDiv" wx:for="{{selectedDevices}}">
+        <image class="icon_device" src="../image/device02.png"></image>
+        <text id="{{index}}" class="devices_font" bindtap="showChangeInput">{{item}}</text>
+
+
+         
+        <image id="{{index}}" class="icon_delete" src="../image/delete01.png" bindtap="deleteDevices"></image>
+   </view>
+   
+  
+
+</view>
+
+
